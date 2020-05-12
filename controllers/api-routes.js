@@ -5,26 +5,27 @@ var router=express.Router();
 var db =require("../models");
 
 router.get("/", function(req,res){
-    db.Book.findAll({}).then(function(data){
+    db.Books.findAll({raw:true}).then(function(data){
         var renderhbs={
             books:data
         };
-        console.log(renderhbs);
-        console.log("*********************************")
+        // console.log(data);
+        // console.log(renderhbs);
+        // console.log("*********************************")
         res.render("index", renderhbs);
     });
 });
 
 router.get("api/books",function(req,res){
-    db.Book.findAll({}).then(function(results){
+    db.Books.findAll({}).then(function(results){
         res.json(results);
     });
 });
 
 router.post("/api/books",function(req,res){
-    db.Book.create({
+    db.Books.create({
         title:req.body.title,
-        devoured:req.body.devoured
+        devoured:0
     }).then(function(result){
         res.json(result);
     }) .catch(function(err){
@@ -33,15 +34,14 @@ router.post("/api/books",function(req,res){
 });
 
 router.put("/api/books/:id", function(req,res){
-    console.log(req.body)
-    console.log("##########################")
-    db.Book.update({
-        title:req.body.title,
+    console.log("update:", req.body);
+    console.log("##########################");
+    db.Books.update({
         devoured:req.body.devoured
     },
     {
         where:{
-            id:req.body.id
+            id:req.params.id
         }
     }).then(function(result){
         res.json(result);
@@ -51,7 +51,7 @@ router.put("/api/books/:id", function(req,res){
 });
 
 router.delete("/api/books/:id",function(req,res){
-    db.Book.destroy({
+    db.Books.destroy({
         where:{
             id:req.params.id
         }

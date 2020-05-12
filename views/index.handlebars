@@ -14,7 +14,7 @@
 <ol>
     {{#each books}}
         {{#unless devoured}}
-            {{> books/books-block devoured=true}}
+            {{> books-block}}
         {{/unless}}
     {{/each}}
 </ol>
@@ -32,7 +32,7 @@
 <ol>
     {{#each books}}
         {{#if devoured}}
-             {{> books/books-block devoured=false}}
+             {{> books-block}}
         {{/if}}
     {{/each}}
 </ol>

@@ -1,7 +1,9 @@
 $(function(){
+    console.log("hi there!");
     $(".change-devour").on("click", function(event) {
         var id = $(this).data("id");
         var newdevour = $(this).data("devoured");
+        newdevour=(newdevour==0) ? 1 : 0
         console.log("change devour")
   
     
