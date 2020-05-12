@@ -2,7 +2,7 @@ var express=require("express");
 
 var router=express.Router();
 
-var Book =require("../models/Bookdb.js");
+var db =require("../models");
 
 router.get("/", function(req,res){
     db.Book.findAll({}).then(function(data){
