@@ -1,0 +1,72 @@
+<div class="jumbotron ">
+  <h1 class="display-4 ">Book Paradise!</h1>
+</div>
+
+<div class="container">
+
+ <div class=  "row col-sm-12 d-flex justify-content-center">
+<!---row/column with books to devour--->
+<div class="row todevour col-sm-4">
+
+<h2 id="heading">Books to devour!</h2>
+
+  <div class="col-sm mt-2 reading-list">
+<ol>
+    {{#each books}}
+        {{#unless devoured}}
+            {{> books/books-block devoured=true}}
+        {{/unless}}
+    {{/each}}
+</ol>
+
+</div>
+</div>
+
+<!---row with books that were devoured--->
+
+<div class="row devoured col-sm-4">
+   <div class="col-sm mt-2 reading-list">  
+
+<h2 id="heading2">Books Devoured </h2>
+
+<ol>
+    {{#each books}}
+        {{#if devoured}}
+             {{> books/books-block devoured=false}}
+        {{/if}}
+    {{/each}}
+</ol>
+
+</div> 
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!---end o main row--->
+</div> 
+ <div class="row add col-sm-3 d-inline-block mx-3">
+
+<h2 id="add">Add a Book</h2>
+<form class="create-form" action="/" method="POST">
+{{!-- <div class="form-group">
+    <label for="book"> Book Author:</label>
+    <input type= "text" id="book" name="name">
+</div> --}}
+<div class="form-group">
+    <label for="book"> Book Title:</label>
+    <input type= "text" id="title" name="name">
+    
+</div>
+
+<button type="submit">Add a Book</button>
+
+</form>
+</div>
+</div>
+
