@@ -4,26 +4,25 @@
 
 <div class="container">
 
- <div class=  "row col-sm-12 d-flex justify-content-between">
-<!---row/column with books to devour--->
-<div class="row todevour col-sm-6">
+    <div class=  "row col-sm-12 d-flex justify-content-between">
 
-<h2 id="heading">Books to devour!</h2>
-</div> <!-- ***** END HEADING ROW ***** -->
+    <!---row/column with books to devour--->
+    <div class="row todevour col-sm-6">
+        <div class="mt-2 col-sm-12 text-center"> <!-- ***** MOVED THIS FROM BELOW LINE 12 TO ABOVE LINE 12 ***** -->
+            <h2 id="heading">Books to devour!</h2>
+        </div> <!-- ***** END HEADING ROW ***** -->
+        <div class="row col-sm-12"> <!-- ***** GIVING LIST IT'S OWN ROW ***** -->
+            <ol>
+                {{#each books}}
+                    {{#unless devoured}}
+                        {{>books-block}}
+                    {{/unless}}
+                {{/each}}
+            </ol>
+        </div>
+    </div>
 
-  <div class="col-sm-12">  <!-- ***** GIVING LIST IT'S OWN ROW ***** -->
-<ol>
-    {{#each books}}
-        {{#unless devoured}}
-            {{> books-block}}
-        {{/unless}}
-    {{/each}}
-</ol>
-
-</div>
-</div>
-
-<!---row with books that were devoured--->
+    <!---row with books that were devoured--->
     <div class="row devoured col-sm-6">   <!-- ***** CHANGED COL-SM TO 6 SINCE PARENT WAS 12 & HAVE 2 COL'S ***** -->
         <div class="mt-2 col-sm-12">  
             <h2 id="heading">Books Devoured </h2>
@@ -41,9 +40,6 @@
     </div>
 
     </div>   <!---end o main row--->
-
-
-
 
 <!-- ***** CHANGED COL TO 12 TO TAKE UP ENTIRE ROW ***** -->
 <!-- ***** ALSO ADDED CENTERING CLASSES ***** -->
@@ -63,5 +59,6 @@
     </div>
 
 </div>  {{!-- ***** END OF CONTAINER ***** --}}
+
 
 
