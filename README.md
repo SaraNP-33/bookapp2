@@ -97,7 +97,7 @@ sequelize init:models
 
 * [Handlebars](https://handlebarsjs.com/guide/#what-is-handlebars)
 
-* [Sequelize] (https://sequelize.org/master/manual/model-basics.html)
+* [Sequelize](https://sequelize.org/master/manual/model-basics.html)
 
 ## Deployed Link
 * [See Live Site](https://tranquil-sierra-07610.herokuapp.com/)
