@@ -6,50 +6,56 @@
     color:#000080;
 }
 
-.container{
-flex-direction:row;
-
-}
-    
-
-
 #heading{
-    
     font-family:"Lobster", cursive ;
     color:#000080;
-
-
-}
-#heading2{
-    font-family:"Lobster", cursive ;
-    color:#000080;
-   
-   
-  
+    width: 90%;
+    text-align: center;
 }
 
-.todevour ol{
-    
+.todevour,
+.devoured {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+
+.todevour ol,
+.devoured ol {  
     font-family:'Kreon', serif;
-
+    padding: 0;
+    margin: 0 auto;
 }
-
-.devoured ol{
-   
-    font-family:'Kreon', serif;
+.container {
+    padding-bottom: 5vh;
 }
-
 .create-form{
-   position:absolute;
-   left:40%;
-   top:80%;
-    padding:30px;
+    /* position:absolute; */
+    /* left:40%; */
+    /* top:80%; */
+    /* padding:30px; */
     font-family: "Kreon", serif;
     color:#000080;
 }
+
 #add{
-    margin-top:6%;
-    text-align: center;
+    margin-top:5%;
+    /* text-align: center; */
     font-family: "Lobster", cursive;
     color:#000080;
+};
+input{
+    background-color:inherit;
+    color:inherit;
+    border-radius: inherit;
+};
+
+button{
+    background-color: #FF8C00;
+    color:#000080;
+    border-radius:4%;
 };
