@@ -24,25 +24,23 @@
 </div>
 
 <!---row with books that were devoured--->
+    <div class="row devoured col-sm-6">   <!-- ***** CHANGED COL-SM TO 6 SINCE PARENT WAS 12 & HAVE 2 COL'S ***** -->
+        <div class="mt-2 col-sm-12">  
+            <h2 id="heading">Books Devoured </h2>
+            <div class="content">
+            <ol>
+                {{#each books}}
+                    {{#if devoured}}
+                         {{>books-block}}
+                    {{/if}}
+                {{/each}}
+            </ol>
+            </div>
 
-<div class="row devoured col-sm-6">
-   <div class="mt-2 col-sm-12">  
+        </div> 
+    </div>
 
-<h2 id="heading2">Books Devoured </h2>
-<div class="content">
-
-<ol>
-    {{#each books}}
-        {{#if devoured}}
-             {{> books-block}}
-        {{/if}}
-    {{/each}}
-</ol>
-</div>
-
-</div> 
-
-</div> <!---end o main row--->
+    </div>   <!---end o main row--->
 
 
 
