@@ -1,11 +1,12 @@
 <li>
-     <div class="d-flex flex-row justify-content-between">
+     <div class="d-flex flex-row justify-content-between title">
     {{title}}
-     <div class="mb-2 d-flex justify-content-end">
-    <button class="change-devour ml-2 mr-2" data-id="{{id}}" data-devoured="{{devoured}}">
-        {{#if devoured}} Read Again! {{else}}Devour!{{/if}}
+    
+     <div class="mb-2 pl-3 d-flex justify-content-end">
+    <button class="change-devour ml-5 mr-2" data-id="{{id}}" data-devoured="{{devoured}}">
+        {{#if devoured}} Read Again {{else}}Devour{{/if}}
     </button>
-    <button class="delete-book" data-id="{{id}}">Delete!</button>
+    <button class="delete-book" data-id="{{id}}">Delete</button>
     </div>
     </div>
 </li>

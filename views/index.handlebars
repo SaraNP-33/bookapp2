@@ -1,15 +1,15 @@
 <div class="jumbotron ">
-  <h1 class="display-4 ">Book Paradise!</h1>
+  <h1 class="display-4 ">Book Paradise</h1>
 </div>
 
-<div class="container">
+<div class="container-fluid">
 
     <div class=  "row col-sm-12 d-flex justify-content-between">
 
     <!---row/column with books to devour--->
     <div class="row todevour col-sm-6">
         <div class="mt-2 col-sm-12 text-center"> <!-- ***** MOVED THIS FROM BELOW LINE 12 TO ABOVE LINE 12 ***** -->
-            <h2 id="heading">Books to devour!</h2>
+            <h2 id="heading">Books to Devour</h2>
         </div> <!-- ***** END HEADING ROW ***** -->
         <div class="row col-sm-12"> <!-- ***** GIVING LIST IT'S OWN ROW ***** -->
             <ol>
@@ -24,10 +24,10 @@
 
     <!---row with books that were devoured--->
     <div class="row devoured col-sm-6">   <!-- ***** CHANGED COL-SM TO 6 SINCE PARENT WAS 12 & HAVE 2 COL'S ***** -->
-        <div class="mt-2 col-sm-12">  
+        <div class="mt-2 col-sm-12 text-center">  
             <h2 id="heading">Books Devoured </h2>
             <div class="content">
-            <ol>
+            <ol class="numbers">
                 {{#each books}}
                     {{#if devoured}}
                          {{>books-block}}
@@ -51,10 +51,10 @@
             <div class="row form-group">
                 {{!-- <label for="book"> Book Title:</label> ***** REPLACED WITH PLACEHOLDER TEXT ***** --}}
                 <!-- *** ADDED PLACEHOLDER AND CENTERING CLASS *** -->
-                <input class="text-center" type= "text" id="title" name="name" placeholder="Enter Book Title"> 
+                <input class=" userBook text-center" type= "text" id="title" name="name" placeholder="Enter Book Title"> 
             </div>
             
-            <button class="addBook Mb-5" type="submit">Add a Book</button> <!-- ADDED MARGIN BOTTOM -->
+            <button class="addBook Mb-5" type="submit">Submit</button> <!-- ADDED MARGIN BOTTOM -->
         </form>
     </div>
 
