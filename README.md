@@ -100,7 +100,7 @@ sequelize init:models
 * [Sequelize](https://sequelize.org/master/manual/model-basics.html)
 
 ## Deployed Link
-* [See Live Site](https://tranquil-sierra-07610.herokuapp.com/)
+* [See Live Site](https://morning-sea-53877.herokuapp.com/ )
 
 ## Author
 * *Sara Neves Pereira*
